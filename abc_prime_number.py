@@ -39,10 +39,11 @@ class PrimeNumberNonABC:
     def __init__(self, number: int):
         """Initialisation of the attributes of the class PrimeNumber."""
 
-        if self.validate_prime(number):
+        if PrimeNumberNonABC.validate_prime(number):
             self.number = number
 
-    def validate_prime(self, number: int):
+    @staticmethod
+    def validate_prime(number: int):
         """Return True if number is prime, otherwise False."""
 
         if isinstance(number, int):
